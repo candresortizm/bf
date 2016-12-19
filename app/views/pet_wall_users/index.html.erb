@@ -1,0 +1,19 @@
+<div class="container1">
+  <h1 class="text-center"> Candidates </h1>
+  <section class="row text-center pet_wall_user-controls">
+  </section>
+  <% @pet_wall_user.each do |pwu| %>
+    <article class="pet">
+      <ul class="list-unstyled">
+        <div class="content_pet">
+          <li class="pet_wall_user_name"><strong>Pet: <%= pwu.pet_walls_id %></strong></li>
+          <li class="pet_wall_user_name"><strong>Users:<%=pwu.user_id%></strong></li>
+          <li class="pet_wall_user_name"><strong>Score:<%=pwu.score%></strong></li>
+          <li class="pet_wall_user_name"><strong>Comments:<%=pwu.comments%></strong></li>
+        </div>
+      </ul>
+    </article>
+
+  <% end if @pet_wall_user.any? %>
+
+</div>

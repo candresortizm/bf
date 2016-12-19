@@ -1,0 +1,13 @@
+<div id="adopter_view">
+  <article class="pet">
+    <ul class="list-unstyled">
+      <li class="admin_forms_name"><p><%= @pet_wall.name %></p></li>
+      <li class="admin_forms_name"><%= image_tag @pet_wall.image_url %></li>
+      <li class="admin_forms_name"><strong>Breed: <%= @pet_wall.breed %></strong></li>
+      <li class="admin_forms_name"><strong>Size: <%= @pet_wall.size %></strong></li>
+      <li class="admin_forms_name"><strong>Age: <%= @pet_wall.age %></strong></li>
+      <li class="admin_forms_name"><strong>Type: <%= @pet_wall.type %></strong></li>
+      <li class="col-md-2"><a href="<%= pet_wall_path(@pet_wall.id) %>" data-method="delete" class="btn btn-default"> Delete </a></li>
+    </ul>
+  </article>
+</div>

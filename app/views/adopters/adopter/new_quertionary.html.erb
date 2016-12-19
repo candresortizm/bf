@@ -1,0 +1,75 @@
+<div id="container2">
+  <h1 class="text-center">  Adopt questionary </h1>
+  <%= form_tag create_quertionary_path, method: :post do %>
+    <div class="form-group question">
+      <label>1.</label>
+      Wants a new best friend for ...
+      <div class="radio"><label><input type="radio" name="opt1" value=5>You</label>
+      <label><input type="radio" name="opt1" value=3>Family</label>
+      <label><input type="radio" name="opt1" checked="checked" value=0>As present</label></div>
+    </div>
+    <div class="form-group question">
+      <label>2.</label>
+      In what type of residence do you live?
+      <div class="radio"><label><input type="radio" name="opt2" value=5>House</label>
+      <label><input type="radio" name="opt2" value=3>Apartment</label>
+      <label><input type="radio" name="opt2" checked="checked" value=1>Room</label></div>
+    </div>
+    <div class="form-group question">
+      <label>3.</label>
+      How many hours a day do you estimate the pet will be alone?
+      <div class="radio"><label><input type="radio" name="opt3" value=5>1-3</label>
+      <label><input type="radio" name="opt3" value=3>4-5</label>
+      <label><input type="radio" name="opt3" checked="checked" value=0>More than 5</label></div>
+    </div>
+    <div class="form-group question">
+      <label>4.</label>
+      Have you had a pet before?
+      <div class="radio"><label><input type="radio" name="opt4" value=3>Yes</label>
+      <label><input type="radio" name="opt4" checked="checked" value=0>No</label></div>
+    </div>
+    <div class="form-group question">
+      <label>5.</label>
+      Does anyone living with you (or you) be allergic to dog or cat hair?
+      <div class="radio"><label><input type="radio" checked="checked" value=0 name="opt5">Yes</label>
+      <label><input type="radio" name="opt5" value=3>No</label></div>
+    </div>
+    <div class="form-group question">
+      <label>6.</label>
+      Do you understand that adoption is a lifelong commitment?
+      <div class="radio"><label><input type="radio" checked="checked" name="opt6" value=0>No</label>
+      <label><input type="radio" name="opt6" value=2>Yes</label></div>
+    </div>
+    <div class="form-group question">
+      <label>7.</label>
+      Are you aware of the economic cost of keeping a pet?
+      <div class="radio"><label><input type="radio" name="opt7" value=3>Yes</label>
+      <label><input type="radio" name="opt7" checked="checked" value=1>No</label></div>
+    </div>
+    <div class="form-group question">
+      <label>8.</label>
+      Do you agree to a periodic visit to your home to verify the status of the adopted animal?
+      <div class="radio"><label><input type="radio" name="opt8" value=5>Yes</label>
+      <label><input type="radio" name="opt8" checked="checked" value=2>No</label></div>
+    </div>
+    <div class="form-group question">
+      <label>9.</label>
+      What do you want the pet for?
+      <div class="radio"><label><input type="radio" name="opt9" value=5>Companionship</label>
+      <label><input type="radio" name="opt9" checked="checked" value=2>Guard</label></div>
+    </div>
+    <div class="form-group question">
+      <label>10.</label>
+      Point out the care you and your family would be willing to give your new pet:
+      <div class="checkbox"><label><input type="checkbox" name="opt10" value="4">Veterinary visits</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="opt11" value="5">Vaccination and vitamins</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="opt12" value="4">Daily walks</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="opt13" value="3">Use of collar with nameplate</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="opt14" value="5">Adequate food every day</label></div>
+    </div>
+    <div class="text-center form-group question">
+      <button type="button" class="btn-lg btn btn-default">Clean</button>
+      <button href="adopters_quertionary_path" type="submit" class="btn-lg btn btn-success">Save</button>
+    </div>
+  <% end %>
+</div>

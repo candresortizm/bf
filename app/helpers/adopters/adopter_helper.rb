@@ -1,0 +1,2 @@
+module Adopters::AdopterHelper
+end

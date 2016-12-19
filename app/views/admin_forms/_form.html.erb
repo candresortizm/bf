@@ -1,0 +1,70 @@
+<% form_name ||= "Manage" %>
+<h1 class="text-center"><%=form_name %> friend </h1>
+<%= form_for @pet_wall ,url: admin_forms_path, method:(form_name.downcase == 'edit' ? 'put' : 'post') do |f|%>
+    <% if @pet_wall.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@pet_wall.errors.count, "error") %> prohibited
+            this article from being saved:
+          </h2>
+          <ul>
+            <% @pet_wall.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+    <div class="form-group">
+      <%= f.label :name%>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :image%>
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :breed%>
+      <%= f.text_field :breed, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :Size%>
+      <select name="pet_wall[size]">
+      <option value="1" selected="selected">Small</option>
+      <option value="2">Medium</option>
+      <option value="3">Big</option>
+    </select>
+
+    </div>
+
+    <div class="form-group">
+      <%= f.label :Age%>
+      <%= f.number_field :age, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :Type%>
+      <%= radio_button_tag(:pet,"dog") %>
+      <%= label_tag(:pet_dog, "Dog") %>
+      <%= radio_button_tag(:pet,"cat") %>
+      <%= label_tag(:pet_cat, "Cat") %>
+
+    </div>
+
+    <div class="form-group">
+      <%= f.label :descriptions%>
+      <%= f.text_area :descriptions , class: "form-control" %>
+    </div>
+
+
+    <div class="form-group">
+      <%= f.label :admission_date%>
+      <%= f.date_select :admission_date, class: "form-control" %>
+    </div>
+
+    <%= f.submit "#{form_name} pet", class: "btn btn-primary" %>
+    <a href="" class="btn btn-default"> Clear </a>
+<% end %>

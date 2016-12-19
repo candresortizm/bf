@@ -1,0 +1,2 @@
+module AdoptersQuestionaryHelper
+end

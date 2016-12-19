@@ -1,0 +1,30 @@
+<div class="container1">
+  <h1 class="text-center"> Our Friends </h1>
+  <section class="row text-center admin_forms-controls">
+      <a href="<%= new_admin_form_path %>" class="btn btn-default"> New friend </a>
+  </section>
+  <% @admin_forms.each do |af| %>
+    <article class="pet">
+      <ul class="list-unstyled">
+        <div class="content_pet">
+          <li class="admin_forms_name"><strong>Name: <%= af.name %></strong></li>
+          <li class="admin_forms_name"><strong><%= image_tag af.image.thumb%></strong></li>
+        </div>
+        <div class="content_pet">
+          <li class="admin_forms_name"><strong>Breed: <%= af.breed %></strong></li>
+          <li class="admin_forms_name"><strong>Size: <%= af.size %></strong></li>
+          <li class="admin_forms_name"><strong>Age: <%= af.age %></strong></li>
+          <li class="admin_forms_name"><strong>Type: <%= af.type %></strong></li>
+          <li class="admin_forms_name"><strong>Descriptions: <%= af.descriptions %></strong></li>
+          <li class="admin_forms_name"><strong>State: <%= af.state %></strong></li>
+          <li class="admin_forms_name"><strong>Admission_date: <%= af.admission_date %></strong></li>
+          <a href="<%= admin_form_path(af.id) %>" data-method="delete" > <li class="btn_general">Delete </li></a>
+          <a href="<%= edit_admin_form_path(af.id) %>" > <li class="btn_general">Edit </li></a>
+          <a href="<%= admin_form_path(af.id) %>" ><li class="btn_general"> Show </li></a>
+        </div>
+      </ul>
+    </article>
+
+  <% end if @admin_forms.any? %>
+
+</div>

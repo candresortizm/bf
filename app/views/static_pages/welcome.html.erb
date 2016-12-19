@@ -1,0 +1,28 @@
+<div class="container">
+
+    <section id="container1">
+      <section id="bg">
+        <aside class="">
+          <h1>Best Friends</h1>
+        </aside>
+      </section>
+      <img class="shadow" src="<%= image_path('sombra_bg_home.png') %>" alt="">
+
+    </section>
+
+    <section id="adopter_view">
+      <% @pet_wall.each do |pw| %>
+
+        <article class="pet">
+          <ul class="list-unstyled">
+            <div class="content_pet">
+              <li class="admin_forms_name"><p><%= pw.name %></p></li>
+              <li class="admin_forms_name"><%= image_tag pw.image_url %></li>
+              <a href="<%= admin_form_path(pw.id) %>" > <li class="btn_general">Show </li></a>
+            </div>
+          </ul>
+        </article>
+
+      <%end if @pet_wall.any? %>
+    </section>
+</div>
